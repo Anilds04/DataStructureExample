@@ -13,21 +13,19 @@ fun main() {
     treeNode.right?.left = Node(60)
     treeNode.right?.right = Node(80)
 
-
-
     println("Output is ${findClosest(treeNode, 35)}")
 }
 
 
+/* Creating BST Node*/
 class Node(val value: Int) {
     var left: Node? = null
     var right: Node? = null
 }
 
-fun findClosest(
-    node: Node?, target: Int
-): Int? {
 
+/* Search the closest in the BST*/
+fun findClosest(node: Node?, target: Int): Int? {
     var currentNode = node
 
     if (currentNode == null)
@@ -38,29 +36,22 @@ fun findClosest(
     while (currentNode != null) {
 
         val value = currentNode.value
-
         if (Math.abs(value - target) < Math.abs(closest - target)) {
             closest = value
         }
-
         currentNode = if (target < value)
             currentNode.left
         else
             currentNode.right
-
     }
-
     return closest
 }
 
-
-fun findIsAvailable(
-    node: Node?, target: Int
-): Boolean {
+/* Search for item in the BST*/
+fun findIsAvailable(node: Node?, target: Int): Boolean {
 
     var isAvailable = false
     var currentNode = node
-
 
     while (currentNode != null) {
 
@@ -85,6 +76,5 @@ fun findIsAvailable(
             else -> null
         }
     }
-
     return isAvailable
 }
