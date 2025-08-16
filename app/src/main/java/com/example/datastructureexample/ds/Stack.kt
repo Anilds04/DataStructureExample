@@ -1,4 +1,4 @@
-package com.example.datastructureexample
+package com.example.datastructureexample.ds
 
 fun main() {
 

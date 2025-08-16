@@ -1,4 +1,4 @@
-package com.example.datastructureexample.searching
+package com.example.datastructureexample.ds
 
 fun main() {
 

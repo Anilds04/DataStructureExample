@@ -14,18 +14,18 @@ fun main(){
 class BubbleSort(val array: Array<Int>) {
     fun bubbleSort() {
 
-        for (i in array.indices) {
+        for (i in 0 until array.size-1) {
 
-            for (j in array.indices) {
+            for (j in 0 until array.size -i-1) {
 
-                if (array[i] < array[j]) {
-                    var temp = array[i]
-                    array[i] = array[j]
+                if (array[j] > array[j+1]) {
+                    var temp = array[j+1]
+                    array[j+1] = array[j]
                     array[j] = temp
                 }
             }
         }
 
-        println(array)
+        println(array.joinToString())
     }
 }
