@@ -9,7 +9,9 @@ fun main(){
     MySingleton.incrementCounter()
 }
 
-class SingletonClass{
+// it means the constructor is private,
+// so you cannot create an instance of that class directly
+class SingletonClass private constructor(){
 
     companion object{
         private var INSTANCE : SingletonClass? = null
