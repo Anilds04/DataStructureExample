@@ -21,8 +21,6 @@ fun BinarySearch(array : Array<Int>, item : Int){
 
     while (first<=last) {
 
-        println("while")
-
         var mid = (first+last)/2
 
         if (item == array[mid] ) {

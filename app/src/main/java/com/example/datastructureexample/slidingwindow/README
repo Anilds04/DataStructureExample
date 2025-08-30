@@ -1,0 +1,64 @@
+1. Maximum Sum Subarray of Size K
+
+Solution - MaximumSumSubarrayOfSizeK.kt
+
+Problem: Given an array of size N and an integer K, find the maximum sum of any contiguous subarray of size K.
+
+Key Idea: Maintain a running window sum; slide window forward by adding the new element and removing the old one.
+
+Why Important? Entry-level sliding window problem.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+2. Longest Substring Without Repeating Characters
+
+Solution - LongestSubstringWithoutRepeatingCharacters.kt
+
+Problem: Given a string, find the length of the longest substring without repeating characters.
+
+Key Idea: Use a hash set (or hash map for character index) to track characters; move left pointer when duplicates appear.
+
+Why Important? Classic application of variable-sized sliding window.
+
+-----------------------------------------------------------------------------------------------------------------------------
+3. Maximum Sum of Distinct Subarrays With Length K
+
+Solution – MaximumSumOfDistinctSubarraysWithLengthK.kt
+
+Problem: Find the maximum sum of any subarray of length k with all distinct elements.
+
+Key Idea: Use a sliding window + hash set to enforce distinctness and track sum.
+
+Why Important? Classic fixed-size sliding window problem with uniqueness constraint.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+4. Minimum Window Substring
+
+Solution : MinimumWindowSubString.kt
+
+Problem: Given two strings s and t, find the minimum window in s which contains all the characters of t.
+
+Key Idea: Expand right until all characters are included, then shrink left while still valid; track smallest window.
+
+Why Important? Builds understanding of window validity conditions.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+5. Longest Subarray with Ones After Replacement
+
+Problem: Given a binary array and integer K, find the length of the longest subarray containing only 1s after replacing at most K 0s with 1s.
+
+Key Idea: Track count of 0s in the window; shrink window when count > K.
+
+Why Important? Common in interview problems (Netflix, Google, etc.), tests ability to apply window with constraints.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+6. Sliding Window Maximum
+
+Problem: Given an array and window size K, return the maximum in each sliding window.
+
+Key Idea: Use a deque (monotonic queue) to maintain max elements efficiently.
+
+Why Important? Teaches advanced window optimization beyond sums.

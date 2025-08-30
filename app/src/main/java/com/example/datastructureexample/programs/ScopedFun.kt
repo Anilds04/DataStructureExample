@@ -3,6 +3,10 @@ package com.example.datastructureexample.programs
 
 fun main(){
 
+    val arr = arrayOf(1,5,6,9,)
+    val arr1 = Array<Int>(5){i -> i*i}
+    println(arr1.joinToString())
+
     /*
 
     with : if you want to operate on non-null object
@@ -43,6 +47,7 @@ fun main(){
         name = "Employee 1"
         type ="Permanent"
     }
+
 
     with(emp){
         println(name)
@@ -95,6 +100,7 @@ fun main(){
         std1.age
     }
 
+
     println(s2)
 
 }
@@ -103,5 +109,13 @@ fun main(){
 class Student{
     var name  = "Dera"
     val age = 1
+
+    fun score(){
+
+    }
 }
-data class Emp(var name : String = "", var type : String ="")
+class Emp(var name : String = "", var type : String =""){
+    fun run(){
+
+    }
+}

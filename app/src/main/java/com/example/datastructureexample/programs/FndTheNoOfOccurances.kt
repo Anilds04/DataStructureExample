@@ -20,6 +20,10 @@ fun findTheOccurrence(str : String){
         map[st] =  map.getOrDefault(st, 0)+1
     }
     println(map)
+
+    for((key, value) in map){
+        println("$key -> $value")
+    }
    // to find maximum repeated
     //println(map.maxByOrNull { it.value })
 }
