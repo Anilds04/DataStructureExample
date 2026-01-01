@@ -1,6 +1,8 @@
 package com.example.datastructureexample.coroutine
 
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.coroutineScope
@@ -34,4 +36,17 @@ suspend fun longRunningTask() = coroutineScope {
         }
     }
 
+}
+
+
+fun t(){
+    val scope = CoroutineScope(IO).launch {
+
+    }
+
+    CoroutineScope(IO).launch {
+
+    }
+
+    scope.cancel()
 }

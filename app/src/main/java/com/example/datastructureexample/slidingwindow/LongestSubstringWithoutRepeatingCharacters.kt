@@ -3,7 +3,7 @@ package com.example.datastructureexample.slidingwindow
 import kotlin.math.max
 
 fun main() {
-    val maxLength = lengthOfLongestSubstring("abcbbabefghi")
+    val maxLength = dummy("abcbbabefghi")
     println(maxLength)
 }
 
@@ -50,3 +50,30 @@ fun lengthOfLongestSubstring1(s: String): Int {
 
     return best
 }
+
+
+    fun dummy(s: String): Int {
+
+
+
+
+        var left = 0
+        var maxLen = 0
+
+        var set = HashSet<Char>()
+
+
+        for (right in s.indices) {
+
+            while (set.contains(s[right])) {
+                set.remove(s[left])
+                left++
+            }
+
+            set.add(s[right])
+            maxLen = maxOf(right-left+1, maxLen)
+
+        }
+
+        return maxLen
+    }

@@ -13,8 +13,9 @@ fun main() {
 
 
     val num = 2.345676
-
     println(String.format("%.2f", num))
+
+
     runBlocking {
        val (user , posts ) =  fetchUserAndPosts()
         println("User  $user")
