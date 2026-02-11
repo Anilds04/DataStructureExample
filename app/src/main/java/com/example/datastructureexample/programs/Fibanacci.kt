@@ -2,8 +2,9 @@ package com.example.datastructureexample.programs
 
 fun main() {
 
-   // println(fibIterative(10))
-    println(fibList(10))
+    // println(fibIterative(10))
+    //  println(fibList(10))
+    println(fibRecursiveNum(3))
 }
 
 
@@ -31,4 +32,33 @@ fun fibList(n: Int): List<Int> {
             prev + next                      // append next value to list
         }
     }
+}
+
+
+fun fibIterativeNum(n: Int): Int {
+
+    if (n == 0) return 0
+    if (n == 1) return 1
+
+    var prev1 = 1
+    var prev2 = 0
+
+    var current = 0
+
+    for (i in 2..n) {
+
+        current = prev1 + prev2
+        prev2 = prev1
+        prev1 = current
+    }
+
+    return current
+}
+
+
+fun fibRecursiveNum(n: Int): Int {
+
+    if (n == 0 || n == 1) return n
+
+    return fibRecursiveNum(n - 1) + fibRecursiveNum(n - 2)
 }

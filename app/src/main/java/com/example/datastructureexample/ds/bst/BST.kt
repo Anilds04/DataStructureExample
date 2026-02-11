@@ -1,4 +1,4 @@
-package com.example.datastructureexample.ds
+package com.example.datastructureexample.ds.bst
 
 fun main() {
 
@@ -15,6 +15,9 @@ fun main() {
 
 
     println("Output is ${findClosest(treeNode, 35)}")
+
+
+
 }
 
 
@@ -37,6 +40,7 @@ fun findClosest(node: Node?, target: Int): Int? {
     while (currentNode != null) {
 
         val value = currentNode.value
+
         if (Math.abs(value - target) < Math.abs(closest - target)) {
             closest = value
         }
@@ -79,3 +83,22 @@ fun findIsAvailable(node: Node?, target: Int): Boolean {
     }
     return isAvailable
 }
+
+//Kotlin Program – Validate BST
+fun isValidBST(root: Node?): Boolean {
+
+    fun helper(min: Long, max: Long, node: Node?): Boolean {
+
+        if (node == null) return true
+
+        if (node.value.toLong() <= min || node.value.toLong() >= max) return false
+
+        return helper(min, node.value.toLong(), node.left) &&
+                helper(node.value.toLong(), max, node.right)
+    }
+
+
+    return helper(Long.MIN_VALUE, Long.MIN_VALUE, root)
+}
+
+
