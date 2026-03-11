@@ -17,7 +17,7 @@ fun maximumSubarraySum(nums: IntArray, k: Int): Long {
     var left = 0
     var seen = HashSet<Int>()
 
-    for (right in nums.indices) {
+    for (right in nums.indices) { 
 
 
         while (nums[right] in seen){

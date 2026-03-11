@@ -2,19 +2,9 @@ package com.example.datastructureexample
 
 fun main(){
 
-    //Calling Lamda
-    println(greet_lamda("ANil"))
+    val lamda1 = { a : Int -> a*a}
 
-    //Calling higher order fun
-    val nam = greet_higher("Ani"){
-        it
-    }
+    val lamda2 : (Int) -> Int = { n -> n*n}
+
 }
 
-
-val greet_lamda :(String) -> String = { "Greet user $it"}
-
-
-fun greet_higher(name: String, action : (String) -> String) :String{
-    return action(name)
-}

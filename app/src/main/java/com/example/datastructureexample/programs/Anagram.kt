@@ -13,7 +13,8 @@ s = "rat", t = "car" → false*/
 
 fun main(){
 
-    val result = isValidAnagram("listen","silent")
+    val result = isAnagramUsingGetOrDefault("listen","silent")
+    println(result)
 }
 
 fun isValidAnagram(s: String, t: String) : Boolean {
@@ -30,3 +31,22 @@ fun isValidAnagram(s: String, t: String) : Boolean {
 }
 
 
+fun isAnagramUsingGetOrDefault(a: String, b: String): Boolean {
+
+    val s1 = a.replace(" ", "")
+    val s2 = b.replace(" ", "")
+
+    if(s1.length != s2.length) return  false
+
+    val map = HashMap<Char, Int>()
+
+    for ( c in s1){
+        map[c] = map.getOrDefault(c, 0)+1
+    }
+    for ( c in s2){
+        map[c] = map.getOrDefault(c, 0)-1
+    }
+
+    return map.values.all { it == 0 }
+
+}

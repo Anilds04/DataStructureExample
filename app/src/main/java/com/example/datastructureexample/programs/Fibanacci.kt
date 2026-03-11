@@ -4,7 +4,7 @@ fun main() {
 
     // println(fibIterative(10))
     //  println(fibList(10))
-    println(fibRecursiveNum(3))
+    println(fibRecursiveNum(3))    
 }
 
 
@@ -61,4 +61,5 @@ fun fibRecursiveNum(n: Int): Int {
     if (n == 0 || n == 1) return n
 
     return fibRecursiveNum(n - 1) + fibRecursiveNum(n - 2)
+
 }
